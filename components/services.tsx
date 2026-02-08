@@ -2,20 +2,8 @@ import { Armchair, Car, Sparkles, Paintbrush, ShieldCheck, Lightbulb } from "luc
 
 const services = [
   {
-    icon: Armchair,
-    title: "Pranie tapicerki meblowej",
-    description:
-      "Profesjonalne pranie kanap, foteli i krzeseł u klienta. Usuwamy plamy, zabrudzenia i nieprzyjemne zapachy.",
-  },
-  {
-    icon: Car,
-    title: "Pranie tapicerki samochodowej",
-    description:
-      "Dokładne czyszczenie siedzeń, podsufitki i dywaników samochodowych. Efekt jak nowy.",
-  },
-  {
     icon: Sparkles,
-    title: "Kompleksowe czyszczenie wnętrza",
+    title: "Kompleksowe czyszczenie wnętrza auta",
     description:
       "Pełny detailing wnętrza auta – od deski rozdzielczej po najmniejsze zakamarki.",
   },
@@ -36,6 +24,18 @@ const services = [
     title: "Polerowanie reflektorów",
     description:
       "Przywracanie przejrzystości zmatowiałym reflektorom. Lepszy wygląd i bezpieczeństwo.",
+  },
+    {
+    icon: Armchair,
+    title: "Pranie tapicerki meblowej",
+    description:
+      "Profesjonalne pranie kanap, foteli i krzeseł u klienta. Usuwamy plamy, zabrudzenia i nieprzyjemne zapachy.",
+  },
+  {
+    icon: Car,
+    title: "Pranie tapicerki samochodowej",
+    description:
+      "Dokładne czyszczenie siedzeń, podsufitki i dywaników samochodowych. Efekt jak nowy.",
   },
 ]
 

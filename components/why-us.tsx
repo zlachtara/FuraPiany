@@ -3,8 +3,8 @@ import { MapPin, Search, ArrowLeftRight, Beaker, ThumbsUp } from "lucide-react"
 const reasons = [
   {
     icon: MapPin,
-    title: "Praca u klienta",
-    description: "Przyjeżdżamy do Ciebie – nie musisz nigdzie jechać.",
+    title: "Praca również u klienta",
+    description: "Dla Twojej wygody oferujemy również realizację usługi u klienta.",
   },
   {
     icon: Search,
