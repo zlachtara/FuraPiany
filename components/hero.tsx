@@ -29,7 +29,7 @@ export function Hero() {
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href="tel:+48000000000">
+            <a href="tel:+48517 435 296">
               <Phone className="mr-2 h-5 w-5" />
               Zadzwoń / Umów usługę
             </a>
