@@ -18,7 +18,7 @@ export function Footer() {
           &copy; {new Date().getFullYear()} Fura Piany. Wszelkie prawa zastrzeżone.
         </p>
         <p className="mt-6 text-xs text-muted-foreground/60">
-          Strona stworzona przez Z.Lachtare
+          Strona stworzona przez Z.Lachtara i O.Bielański
         </p>
       </div>
     </footer>
