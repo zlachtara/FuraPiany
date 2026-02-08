@@ -11,16 +11,16 @@ const projects = [
   },
   {
     image: "/images/portfolio-interior.jpg",
-    alt: "Hyundai Santa Fe – czyszczenie wnętrza",
-    title: "Hyundai Santa Fe – Kompleksowe czyszczenie",
+    alt: "Honda Accord – czyszczenie wnętrza",
+    title: "Honda Accord – Kompleksowe czyszczenie",
     description:
       "Część 1: kompleksowe czyszczenie wnętrza. 20-godzinny dzień pracy na pełnych obrotach!",
     tags: ["Czyszczenie wnętrza", "20h pracy"],
   },
   {
     image: "/images/portfolio-ceramic.jpg",
-    alt: "Hyundai Santa Fe – korekta lakieru i powłoka ceramiczna",
-    title: "Hyundai Santa Fe – Korekta i ceramika",
+    alt: "Honda Accord – korekta lakieru i powłoka ceramiczna",
+    title: "Honda Accord – Korekta i ceramika",
     description:
       "Część 2: korekta lakieru i aplikacja dwuletniej powłoki ceramicznej. Efekt powala! ✨🚘",
     tags: ["Korekta lakieru", "Powłoka ceramiczna"],

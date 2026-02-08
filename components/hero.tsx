@@ -22,10 +22,10 @@ export function Hero() {
           Fura Piany – Profesjonalne czyszczenie i detailing samochodów
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm font-medium text-background/60 sm:text-base">
-          Pranie tapicerki meblowej i samochodowej u klienta &bull; Detailing wnętrz &bull; Korekta lakieru &bull; Powłoki ceramiczne &bull; Polerowanie reflektorów
+          Detailing wnętrz &bull; Korekta lakieru &bull; Powłoki ceramiczne &bull; Polerowanie reflektorów Pranie tapicerki meblowej i samochodowej u klienta &bull;
         </p>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-background/80 sm:text-lg">
-          Witajcie! Zajmujemy się praniem tapicerki meblowej i samochodowej u klienta. Detailingowym czyszczeniem wnętrz aut oraz polerowaniem reflektorów. Usługi wykonujemy bardzo dokładnie i sprawnie. Zapraszamy do kontaktu.
+          Witajcie! Zajmujemy się kompleksowym czyszczeniem wnętrz aut oraz polerowaniem reflektorów. Pranie tapicerki meblowej i kompleksowe czyszczenie wnętrz aut także u klienta. Usługi wykonujemy bardzo dokładnie i sprawnie. Zapraszamy do kontaktu.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
@@ -42,7 +42,6 @@ export function Hero() {
           </Button>
         </div>
       </div>
-
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <div className="h-12 w-6 rounded-full border-2 border-background/30 p-1">
           <div className="h-2 w-2 animate-bounce rounded-full bg-primary" />
