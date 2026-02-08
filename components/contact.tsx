@@ -34,7 +34,7 @@ export function Contact() {
 
             <div className="mt-8 space-y-6">
               <a
-                href="tel:+48000000000"
+                href="tel:+48517435296"
                 className="flex items-center gap-4 text-background/80 transition-colors hover:text-primary"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -54,7 +54,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-background/50">E-mail</p>
-                  <p className="font-medium text-background">kontakt@furapiany.pl</p>
+                  <p className="font-medium text-background">jaroslaw.kamin@onet.pl</p>
                 </div>
               </a>
             </div>
