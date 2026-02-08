@@ -71,7 +71,7 @@ export function Navbar() {
             ))}
             <div className="pt-2">
               <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                <a href="tel:+48000000000">
+                <a href="tel:+48517435296">
                   <Phone className="mr-2 h-4 w-4" />
                   Zadzwoń
                 </a>
