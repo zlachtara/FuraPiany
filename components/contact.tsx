@@ -46,7 +46,7 @@ export function Contact() {
                 </div>
               </a>
               <a
-                href="mailto:kontakt@furapiany.pl"
+                href="mailto:jaroslaw.kamin@onet.pl"
                 className="flex items-center gap-4 text-background/80 transition-colors hover:text-primary"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
