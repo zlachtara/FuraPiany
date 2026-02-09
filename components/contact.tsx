@@ -1,21 +1,17 @@
 "use client"
 
-import React from "react"
-
-import { useState } from "react"
-import { Phone, Mail, Send } from "lucide-react"
+import { useActionState } from "react"
+import { Phone, Mail, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
+import { sendContactEmail, type ContactFormState } from "@/app/actions/send-email"
+
+const initialState: ContactFormState = { success: false, error: null }
 
 export function Contact() {
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+  const [state, formAction, isPending] = useActionState(sendContactEmail, initialState)
 
   return (
     <section id="kontakt" className="bg-foreground py-20 lg:py-28">
@@ -29,7 +25,8 @@ export function Contact() {
               Skontaktuj się z nami
             </h2>
             <p className="mt-4 text-base leading-relaxed text-background/70">
-              Chcesz odświeżyć wnętrze auta lub przywrócić blask lakierowi? Skontaktuj się z nami – Fura Piany zrobi resztę!
+              Chcesz odświeżyć wnętrze auta lub przywrócić blask lakierowi? Skontaktuj się z nami
+              – Fura Piany zrobi resztę!
             </p>
 
             <div className="mt-8 space-y-6">
@@ -61,10 +58,10 @@ export function Contact() {
           </div>
 
           <div className="rounded-lg border border-background/10 bg-background/5 p-6 sm:p-8">
-            {submitted ? (
-              <div className="flex h-full flex-col items-center justify-center text-center">
+            {state.success ? (
+              <div className="flex h-full flex-col items-center justify-center py-8 text-center">
                 <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Send className="h-8 w-8" />
+                  <CheckCircle2 className="h-8 w-8" />
                 </div>
                 <h3 className="font-display text-xl font-semibold text-background">
                   Wiadomość wysłana!
@@ -74,7 +71,13 @@ export function Contact() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form action={formAction} className="space-y-5">
+                {state.error && (
+                  <div className="flex items-center gap-2 rounded-md bg-destructive/10 p-3 text-sm text-red-400">
+                    <AlertCircle className="h-4 w-4 shrink-0" />
+                    {state.error}
+                  </div>
+                )}
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-background/80">
@@ -82,8 +85,10 @@ export function Contact() {
                     </Label>
                     <Input
                       id="name"
+                      name="name"
                       placeholder="Jan"
                       required
+                      disabled={isPending}
                       className="border-background/10 bg-background/5 text-background placeholder:text-background/30 focus-visible:ring-primary"
                     />
                   </div>
@@ -93,9 +98,11 @@ export function Contact() {
                     </Label>
                     <Input
                       id="phone"
+                      name="phone"
                       type="tel"
                       placeholder="+48 000 000 000"
                       required
+                      disabled={isPending}
                       className="border-background/10 bg-background/5 text-background placeholder:text-background/30 focus-visible:ring-primary"
                     />
                   </div>
@@ -106,8 +113,10 @@ export function Contact() {
                   </Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="jan@example.com"
+                    disabled={isPending}
                     className="border-background/10 bg-background/5 text-background placeholder:text-background/30 focus-visible:ring-primary"
                   />
                 </div>
@@ -117,15 +126,31 @@ export function Contact() {
                   </Label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Opisz czego potrzebujesz..."
                     rows={4}
                     required
+                    disabled={isPending}
                     className="border-background/10 bg-background/5 text-background placeholder:text-background/30 focus-visible:ring-primary"
                   />
                 </div>
-                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
-                  <Send className="mr-2 h-4 w-4" />
-                  Wyślij wiadomość
+                <Button
+                  type="submit"
+                  disabled={isPending}
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                  size="lg"
+                >
+                  {isPending ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Wysyłanie...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" />
+                      Wyślij wiadomość
+                    </>
+                  )}
                 </Button>
               </form>
             )}
